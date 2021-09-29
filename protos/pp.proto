@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+// Ping Pong Service
+service PPService{
+    // Sends Ping, Receives Pong
+    rpc ping (Ping) returns (Pong){}
+}
+
+// Ping Message
+message Ping{
+    string message = 1;
+}
+
+// Pong Message
+message Pong{
+    string message = 1;
+}
